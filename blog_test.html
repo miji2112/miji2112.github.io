@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog · Bootstrap</title>
+    
+    <!-- CSS de Bootstrap (CDN) - CORREGIR: Reemplazar # con la URL del CDN -->
+    <link href="#" rel="#" >
+    
+    <style>
+        /* Estilos específicos del template Blog */
+        .blog-header-logo {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+            font-size: 2.25rem;
+        }
+        
+        .blog-header-logo:hover {
+            text-decoration: none;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        }
+        
+        .flex-auto {
+            flex: 0 0 auto;
+        }
+        
+        .h-250 { height: 250px; }
+        @media (min-width: 768px) {
+            .h-md-250 { height: 250px; }
+        }
+        
+        /* Paginación */
+        .blog-pagination {
+            margin-bottom: 4rem;
+        }
+        
+        /* Posts del blog */
+        .blog-post {
+            margin-bottom: 4rem;
+        }
+        
+        .blog-post-meta {
+            margin-bottom: 1.25rem;
+            color: #727272;
+        }
+        
+        /* Para imágenes de placeholder (opcional) */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <!-- Header con navegación - VERSIÓN SIMPLIFICADA -->
+    <header class="border-bottom lh-1 py-3">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html">
+                    Mi Blog Personal
+                </a>
+            </div>
+        </div>
+    </header>
+</div>
+
+<main class="container">
+    <!-- Artículo destacado -->
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+            <h1 class="display-4 fst-italic">Título del artículo destacado</h1>
+            <p class="lead my-3">
+                Este es un párrafo de introducción más largo para el artículo principal. 
+                Explica de qué trata y engancha al lector para que siga leyendo.
+            </p>
+            <p class="lead mb-0">
+                <a href="#" class="text-body-emphasis fw-bold">Seguir leyendo...</a> <!-- CORREGIR: Reemplazar # con enlace real -->
+            </p>
+        </div>
+    </div>
+
+    <!-- Tarjetas de artículos secundarios -->
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary-emphasis">Diseño</strong>
+                    <h3 class="mb-0">Título del post</h3>
+                    <div class="mb-1 text-body-secondary">Nov 12</div>
+                    <p class="card-text mb-auto">
+                        Este es un texto de ejemplo que acompaña a la tarjeta. 
+                        Explica brevemente de qué trata el artículo.
+                    </p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> <!-- CORREGIR: Reemplazar # con enlace real -->
+                        Seguir leyendo
+                        <svg class="bi" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!-- 
+                        === IMAGEN 1: Artículo Nuevo ===
+                        Actualmente hay un div gris de placeholder. Reemplazar con una imagen real.
+                        
+                        
+                        OPCIÓN CON BOOTSTRAP (responsiva):
+                        <img src="https://picsum.photos/200/250?random=1" 
+                             alt="Imagen representativa del artículo de diseño" 
+                             class="img-fluid" 
+                             style="height: 250px; object-fit: cover; width: 200px;">
+                    -->
+                    <div class="bg-secondary" style="width: 200px; height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">Tecnología</strong>
+                    <h3 class="mb-0">Otro título de post</h3>
+                    <div class="mb-1 text-body-secondary">Nov 11</div>
+                    <p class="mb-auto">
+                        Otro texto de ejemplo para mostrar cómo se ven las tarjetas 
+                        una al lado de la otra en pantallas grandes.
+                    </p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> <!-- CORREGIR: Reemplazar # con enlace real -->
+                        Seguir leyendo
+                        <svg class="bi" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!-- 
+                        === IMAGEN 2: Artículo Nuevo ===
+                        Misma situación: placeholder gris a reemplazar.
+                        
+                        RECOMENDACIÓN: Usar una imagen diferente para variar
+                        <img src="https://picsum.photos/200/250?random=2" 
+                             alt="Imagen representativa del artículo de tecnología" 
+                             style="width: 200px; height: 250px; object-fit: cover;">
+                        
+                        El parámetro ?random=2 nos dará una imagen distinta a la anterior
+                    -->
+                    <div class="bg-secondary" style="width: 200px; height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal del blog + sidebar -->
+    <div class="row g-5">
+        <!-- Columna principal (artículos) -->
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                Artículos recientes
+            </h3>
+
+            <!-- Artículo 1 -->
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">Ejemplo de post</h2>
+                <p class="blog-post-meta">1 de enero, 2024 por <a href="#">Autor</a></p> <!-- CORREGIR: Reemplazar # con enlace real -->
+                
+                <!-- 
+                    === POSIBLE IMAGEN 3: Dentro del artículo ===
+                    Podemos añadir una imagen para ilustrar el contenido del post
+                    
+                    EJEMPLO:
+                    <img src="https://picsum.photos/800/400?random=3" 
+                         alt="Imagen ilustrativa del artículo" 
+                         class="img-fluid mb-3 rounded">
+                    Esto añadiría una imagen responsiva con bordes redondeados
+                -->
+                
+                <p>
+                    Este es el contenido del artículo. Puedes escribir párrafos, 
+                    incluir listas, citas, y todo tipo de formato.
+                </p>
+                <hr>
+                <p>
+                    Aquí va otro párrafo con más texto. Bootstrap estiliza automáticamente 
+                    los elementos HTML como títulos, listas, tablas, etc.
+                </p>
+                <h3>Subtítulo</h3>
+                <p>
+                    Más texto debajo de un subtítulo. Puedes usar 
+                    <strong>negritas</strong>, <em>cursivas</em> y otros formatos.
+                </p>
+                <ul>
+                    <li>Elemento de lista 1</li>
+                    <li>Elemento de lista 2 con descripción más larga</li>
+                    <li>Elemento de lista 3</li>
+                </ul>
+                <p>Y aquí continúa el texto después de la lista.</p>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">Otro post</h2>
+                <p class="blog-post-meta">23 de diciembre, 2023 por <a href="#">Otro Autor</a></p> <!-- CORREGIR: Reemplazar # con enlace real -->
+                
+                <!-- 
+                    === POSIBLE IMAGEN 4: Segundo artículo ===
+                    Misma oportunidad para añadir contenido visual
+                    
+                    <img src="https://picsum.photos/800/400?random=4" 
+                         alt="Imagen del segundo artículo" 
+                         class="img-fluid mb-3 rounded">
+                -->
+                
+                <p>
+                    Este es otro artículo de ejemplo. Puedes duplicar esta estructura 
+                    para añadir más posts a tu blog.
+                </p>
+                <blockquote class="blockquote">
+                    <p>Esta es una cita destacada dentro del artículo.</p>
+                </blockquote>
+                <p>
+                    Y aquí continúa el contenido después de la cita.
+                </p>
+            </article>
+
+            <!-- Navegación entre páginas del blog -->
+            <nav class="blog-pagination" aria-label="Paginación">
+                <a class="btn btn-outline-primary rounded-pill" href="#">Artículos antiguos</a> <!-- CORREGIR: Reemplazar # con enlace real -->
+                <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Artículos nuevos</a>
+            </nav>
+        </div>
+
+        <!-- Sidebar (barra lateral) -->
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <!-- Acerca de -->
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">Acerca de</h4>
+                    <p class="mb-0">
+                        Personaliza esta sección para contarles a tus visitantes 
+                        un poco sobre ti, tu blog, o lo que quieras compartir.
+                    </p>
+                </div>
+
+                <!-- Posts recientes -->
+                <div>
+                    <h4 class="fst-italic">Posts recientes</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#"> <!-- CORREGIR: Reemplazar # con enlace real -->
+                                <!-- 
+                                    === IMAGEN 5: Post reciente 1 ===
+                                    Miniatura para el primer post reciente
+                                    
+                                    <img src="https://picsum.photos/96/96?random=5" 
+                                         alt="Miniatura del post reciente" 
+                                         class="rounded" 
+                                         style="width: 96px; height: 96px; object-fit: cover;">
+                                -->
+                                <div class="bg-secondary" style="width: 100%; height: 96px; max-width: 96px;"></div>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Título del post reciente</h6>
+                                    <small class="text-body-secondary">Enero 15, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#"> <!-- CORREGIR: Reemplazar # con enlace real -->
+                                <!-- 
+                                    === IMAGEN 6: Post reciente 2 ===
+                                    Miniatura para el segundo post reciente
+                                    
+                                    <img src="https://picsum.photos/96/96?random=6" 
+                                         alt="Miniatura del segundo post reciente" 
+                                         class="rounded" 
+                                         style="width: 96px; height: 96px; object-fit: cover;">
+                                -->
+                                <div class="bg-secondary" style="width: 100%; height: 96px; max-width: 96px;"></div>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Otro post interesante</h6>
+                                    <small class="text-body-secondary">Enero 14, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Archivo y redes sociales -->
+                <div class="p-4">
+                    <h4 class="fst-italic">Archivo</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="#">Marzo 2024</a></li> <!-- CORREGIR: Reemplazar # con enlace real -->
+                        <li><a href="#">Febrero 2024</a></li> <!-- CORREGIR: Reemplazar # con enlace real -->
+                        <li><a href="#">Enero 2024</a></li> <!-- CORREGIR: Reemplazar # con enlace real -->
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Redes</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li> <!-- CORREGIR: Reemplazar # con enlace real a perfil de GitHub -->       
+                        <li><a href="#">LinkedIn</a></li> <!-- CORREGIR: Reemplazar # con enlace real a perfil de LinkedIn -->
+                        <li><a href="#">Instagram</a></li> <!-- CORREGIR: Reemplazar # con enlace real a perfil de Instagram -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    <p>
+        Template de Blog para <a href="https://getbootstrap.com/">Bootstrap</a>, 
+        adaptado para el proyecto de clase.
+    </p>
+    <p class="mb-0">
+        <a href="#">Volver al Inicio (Cover)</a> <!-- CORREGIR: Reemplazar # con enlace real -->
+    </p>
+</footer>
+
+<!-- JavaScript de Bootstrap (para menús interactivos) - CORREGIR: Reemplazar # con la URL del CDN -->
+<script src=#></script>
+</body>
+</html>
