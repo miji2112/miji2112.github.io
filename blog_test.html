@@ -79,6 +79,21 @@
             border-top: 5px solid #ffcc00; /* AMARILLO */
             background-color: #e9ecef;
         }
+
+        /* Estilo para el enlace de creatividad */
+        .enlace-creatividad {
+            font-weight: bold;
+            text-decoration: none;
+            background: linear-gradient(to right, #0000ff, #008000, #ffcc00, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .enlace-creatividad:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
         
     </style>
 </head>
@@ -132,7 +147,11 @@
         <div class="col-md-6">
             <div class="p-4 mb-3 bg-warning-subtle rounded">
                 <h4 class="fst-italic text-danger">Aviso</h4>
-                <p class="mb-0">¡Bienvenido a mi espacio! Mira mis proyectos usando los colores de la bandera de la creatividad.</p>
+                <p class="mb-0">
+                    <a href="https://www.canva.com/design/DAHFEFEvUTk/AhsBPsR-U1fCxaXYgk7hUw/edit" class="enlace-creatividad" target="_blank">
+                        ¡Bienvenido a mi espacio! Mira mis proyectos usando los colores de la bandera de la creatividad.
+                    </a>
+                </p>
             </div>
         </div>
     </div>
